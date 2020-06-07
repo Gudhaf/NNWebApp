@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import NN from "./NNtest";
+import Neee from "./network"
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NN />
   </React.StrictMode>,
   document.getElementById('root')
 );
