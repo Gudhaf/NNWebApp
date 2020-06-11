@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+let costData=[];
+
 //as activation function we will use the sigmoid function
 function sigmoid(value){
   return 1/(1+Math.exp(-value));
@@ -127,6 +129,7 @@ class Network {
   //data follows the structure: [ [input1, input2, ... , inputn, output1, ... , outputmD],  ... , [input1, input2, ... , inputn,  output1, ... , outputm] ]
   train(numberOfIterations,learningRate,data){
     //first of all we need to start an iteration using the value passed to us
+    let step=1;
     for (let iteration = 0; iteration < numberOfIterations; iteration++) {
       data.forEach(line =>{
 
@@ -166,8 +169,15 @@ class Network {
 
 
         let cost=0;
-        this.layers[this.layers.length-1].forEach(outout => { cost+=(outout.value - outout.target)**2 });
+        //this.layers[this.layers.length-1].forEach(outout => { console.log((outout.value - outout.target)**2); });
+        for (let k = 0; k < this.numberOfOutputs; k++) {
+          cost+=(this.layers[this.layers.length-1][k].value- this.layers[this.layers.length-1][k].target)**2;
+        }
 
+        //console.log(cost);
+        if(iteration%5==0){
+          costData.push({x:iteration,y:cost});
+        }
 
         //how much did we deviate from the target?
 
@@ -241,6 +251,9 @@ class Network {
 
   }
 
+  getCostData(){
+    return costData;
+  }
 }
 
 export default Network;

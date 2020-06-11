@@ -1,0 +1,87 @@
+.normal{
+    margin-left: 100px;
+    background-color: #EAEAEA;
+}
+.hidden{
+    margin-left: 10px;
+    background-color: #EAEAEA;
+}
+#yellow {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #310A31;
+  border-radius: 20px;
+  width: 500;
+  margin-top: 30px; 
+  
+
+  animation: change-color-yellow-reverse 0.4s ease-in 0s normal forwards;
+}
+#yellow:hover {
+  animation: change-color-yellow 0.4s ease-in 0s normal forwards;
+}
+@keyframes change-color-yellow {
+  100% {
+    
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      2px 15px 10px 5px rgba(243, 255, 46, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      2px 15px 10px 5px rgba(243, 255, 46, 0);
+  }
+}
+@keyframes change-color-yellow-reverse {
+  0% {
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      2px 15px 10px 5px rgba(243, 255, 46, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      2px 15px 10px 5px rgba(243, 255, 46, 0);
+  }
+}
+
+
+#blue {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #310A31;
+    border-radius: 20px;
+    width: 500;
+    margin-top: 30px;
+    animation: change-color-blue-reverse 0.4s ease-in 0s normal forwards;
+
+  }
+  #blue:hover {
+    animation: change-color-blue 0.4s ease-in 0s normal forwards;
+  }
+
+  @keyframes change-color-blue {
+    100% {
+      -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        2px 15px 10px 5px rgba(243, 255, 46, 0);
+      box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        2px 15px 10px 5px rgba(243, 255, 46, 0);
+        }
+  }
+
+  @keyframes change-color-blue-reverse {
+    0% {
+      -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        2px 15px 10px 5px rgba(243, 255, 46, 0);
+      box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        2px 15px 10px 5px rgba(243, 255, 46, 0);
+        }
+  }
+
+  p{
+    text-align: center;
+    font-family: Georgia, serif;
+font-size: 20px;
+letter-spacing: -0.2px;
+word-spacing: 2.8px;
+color: #310A31;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: small-caps;
+text-transform: none;
+text-shadow: 5px 0px 10px white;
+  }
