@@ -1,0 +1,87 @@
+.column{
+    background: rgb(49,10,49);
+background: linear-gradient(180deg, rgba(49,10,49,1) 38%, rgba(125,5,48,1) 100%);
+width:10px;
+height:1010px;
+}
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #310a31;
+    background-color: #98B1DC;
+    color:#310a31;
+    border-width: 0ch;
+    border-color: #98B1DC;
+	border-radius:50%;
+    height: 100px;
+    width: 100px;
+	cursor:pointer;
+    position: absolute;
+    right:250px;
+    top:550px;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #310a31;
+    outline:none;
+    animation: change-color-reverse 0.4s ease-in 0s normal forwards;
+}
+.myButton:hover {
+    animation: change-color 0.4s ease-in 0s normal forwards;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.img1{
+    height: 400px;
+    position:absolute;
+    right:300px;
+    top:370px;
+    transform: rotate(5deg);
+    animation: wiggle 0.4s infinite;
+}
+
+.img2{
+    height: 400px;
+    position:absolute;
+    right:150px;
+    top:410px;
+    transform: rotate(5deg);
+    animation: wiggle 0.4s infinite;
+}
+
+.img3{
+    height: 400px;
+    position:absolute;
+    right:240px;
+    top:480px;
+    transform: rotate(5deg);
+    animation: wiggle 0.4s infinite;
+}
+
+@keyframes change-color {
+    100% {
+        background: rgb(49,10,49);
+background: linear-gradient(180deg, rgba(49,10,49,1) 38%, rgba(125,5,48,1) 100%);
+        color:#98B1DC;
+      
+    }
+  }
+  @keyframes change-color-reverse {
+    0% {
+        background: rgb(49,10,49);
+background: linear-gradient(180deg, rgba(49,10,49,1) 38%, rgba(125,5,48,1) 100%);
+        color:#98B1DC;
+    }
+  }
+  @keyframes wiggle {
+    0% { height: 400px; }
+   
+   85% { height: 380px; }
+   95% { height: 440px; }
+  100% { height: 400px; }
+}
+

@@ -1,0 +1,54 @@
+.myButton {
+    margin-left:515px;
+	box-shadow: 0px 10px 14px -7px #310a31;
+    background-color: #98B1DC;
+    color:#310a31;
+    border-width: 0ch;
+    border-color: #98B1DC;
+	border-radius:0px 0px 10px 10px;
+	display:inline-block;
+	cursor:pointer;
+
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #310a31;
+    outline:none;
+    animation: change-color-reverse 0.4s ease-in 0s normal forwards;
+}
+.myButton:hover {
+    animation: change-color 0.4s ease-in 0s normal forwards;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+@keyframes change-color {
+    100% {
+        background-color:#310a31;
+        color:#98B1DC;
+      
+    }
+  }
+  @keyframes change-color-reverse {
+    0% {
+        background-color:#310a31;
+        color:#98B1DC;
+    }
+  }
+
+.container{
+    margin-left:100px;
+    margin-right: 50px;
+    height: 300px;
+    width: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-top: 5px solid #310A31;
+    background-color: #98B1DC;
+  }

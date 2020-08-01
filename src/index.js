@@ -2,11 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import AppEngine from "./engine";
-import Test from "./NNtest";
+import AppEngine from "./components/engine";
+import Test from "./components/NNtest";
 
 ReactDOM.render(
   <React.StrictMode>
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
     <Test />
   </React.StrictMode>,
   document.getElementById('root')

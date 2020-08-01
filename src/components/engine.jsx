@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Network from "./network";
+import Network from "./utility/network";
 import Arhitecture from "./networkArhitecture";
 import DataGraph from "./dataVisualization";
 import CostGraph from "./costVisualization";
-import InputData from "./inputField";
+
 import "./engine.css";
 
 let testData;
@@ -72,10 +72,9 @@ function activateNetwork(){
           [3, 1.5, 1],
           [3.5, 0.5, 1],
           [4, 1.5, 1],
-          [5.5, 1, 1],
-          [1, 2, 0]];
+          [5.5, 1, 1]];
     
-    testData = [1,2];
+    testData = [1,1];
     
     neuralNetwork.train(5000,0.2,data);
     cost=neuralNetwork.getCostData();
@@ -86,6 +85,7 @@ function activateNetwork(){
 
     let sol=neuralNetwork.evaluate(testData);
     rawData.curvePoints=findCurve(data,neuralNetwork);
+    console.log(sol);
 
 }
 
@@ -97,7 +97,7 @@ function AppEngine(){
         <Arhitecture arhitectureData={arhitecture} style={{float:"right"}}/>
         <DataGraph data={rawData}/>
         <CostGraph costData={cost}/>
-        <InputData />
+
     </div>);
 }
 

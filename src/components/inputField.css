@@ -1,10 +1,10 @@
 .normal{
     margin-left: 100px;
-    background-color: #EAEAEA;
+    background-color: #98B1DC;
 }
 .hidden{
     margin-left: 10px;
-    background-color: #EAEAEA;
+    background-color: #98B1DC;
 }
 #yellow {
   border-width: 2px;
@@ -83,5 +83,5 @@ text-decoration: none;
 font-style: normal;
 font-variant: small-caps;
 text-transform: none;
-text-shadow: 5px 0px 10px white;
+text-shadow: 5px 0px 10px rgba(125,5,48,0.3);
   }

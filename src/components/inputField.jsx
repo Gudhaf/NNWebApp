@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "@material-ui/core/Slider";
-import "./input.css";
+import TextField from '@material-ui/core/TextField';
+import "./inputField.css";
 
 let x = 0;
 
@@ -10,12 +11,8 @@ const style = {
   color: "#310A31",
 };
 
-const marks = [];
-
-function getMarks(data) {
-  for (let i = data.min; i < data.max + 1; i++) {
-    marks.push({ value: i, label: i });
-  }
+function valuetext(value) {
+  return value;
 }
 
 function InputData(props) {
@@ -23,7 +20,7 @@ function InputData(props) {
                 x = value;
                 props.info.updateValue(x);
               }
-  getMarks(props.info);
+
   return (
     <div id={props.info.color} className={props.info.margin} style={{width:500}}>
       <Slider
@@ -31,9 +28,10 @@ function InputData(props) {
         step={1}
         min={props.info.min}
         max={props.info.max}
-
-        marks={marks}
         style={style}
+        getAriaValueText={valuetext}
+        aria-labelledby="discrete-slider-small-steps"
+        valueLabelDisplay="auto"
         onChangeCommitted={handleChange}
       />
       <p>{props.info.text}</p>
